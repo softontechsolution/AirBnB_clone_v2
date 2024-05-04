@@ -18,7 +18,7 @@ from os import environ
 
 
 # use env to store environ var and devide storage method
-env = environ["HBNB_TYPE_STORAGE"]
+env = environ.get("HBNB_TYPE_STORAGE")
 if env == 'db':
     storage = DBStorage()
     storage.reload()
